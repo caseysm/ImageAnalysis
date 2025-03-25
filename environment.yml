@@ -1,0 +1,38 @@
+name: ImageAnalysis
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.10
+  - pytorch=1.12.0
+  - cudatoolkit=11.6
+  - cudnn
+  - pyqt=5.9.2
+  - numpy=1.22.4
+  - scipy=1.6.0
+  - pandas=1.2.5
+  - scikit-learn=1.2.2
+  - scikit-image=0.18.1
+  - matplotlib=3.3.3
+  - seaborn=0.11.2
+  - bokeh=2.3.3
+  - ipython=7.27.0
+  - notebook=6.4.3
+  - pip=21.1.2
+  - pip:
+    - opencv-python-headless==4.5.2.54
+    - pillow==9.1.1
+    - cellpose==3.0.8
+    - tifffile==2021.6.14
+    - imageio==2.9.0
+    - pyqtgraph==0.11.0
+    - nd2reader==3.3.0
+    - pims==0.5
+    - pims-nd2==1.1
+    - roifile==2023.5.12
+    - natsort==7.1.0
+    - fastremap==1.14.1
+    - tqdm==4.61.1
+    - psutil==5.8.0
+    - pyqt5==5.15.4
