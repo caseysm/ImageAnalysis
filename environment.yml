@@ -37,3 +37,4 @@ dependencies:
     - psutil==5.8.0
     - pyqt5==5.15.4
     - csbdeep==0.7.4
+    - mahotas==1.4.13
