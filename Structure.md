@@ -1,3 +1,6 @@
+# Directory Structure
+
+```
 ImageAnalysis/                           # Root package directory
 ├── __init__.py                      # Package initialization with version
 ├── cli.py                           # Command-line interface (main entry point)
@@ -59,3 +62,32 @@ ImageAnalysis/                           # Root package directory
 ├── LICENSE                          # License information
 ├── CHANGELOG.md                     # Version history
 └── CONTRIBUTING.md                  # Contribution guidelines
+```
+
+## Key Components
+
+### Core Modules
+- **segmentation/**: Cell and nuclei segmentation algorithms
+- **genotyping/**: Barcode identification and assignment
+- **phenotyping/**: Cell phenotype measurement
+- **visualization/**: Data visualization and album generation
+
+### Utility Modules
+- **io.py**: Image and file handling
+- **logging.py**: Logging configuration
+- **parallel.py**: Parallel processing
+- **stats.py**: Statistical analysis
+
+### Configuration
+- **settings.py**: Centralized configuration
+- **pyproject.toml**: Package metadata and dependencies
+
+### Documentation
+- **README.md**: Project overview and setup
+- **CHANGELOG.md**: Version history
+- **CONTRIBUTING.md**: Development guidelines
+
+### Testing
+- Comprehensive test suite
+- Sample test data
+- Test configuration 
