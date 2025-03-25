@@ -36,3 +36,4 @@ dependencies:
     - tqdm==4.61.1
     - psutil==5.8.0
     - pyqt5==5.15.4
+    - csbdeep==0.7.4
