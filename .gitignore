@@ -1,0 +1,14 @@
+# Data
+*.nd2
+*.tif
+*.png
+*.jpg
+*.jpeg
+*.bmp
+
+# Data Folders
+data/
+
+# Output Folders
+output/
+
