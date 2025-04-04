@@ -1,0 +1,51 @@
+{
+  "generated": "2025-03-27T23:10:54.176154",
+  "statistics": {
+    "total_files": 298,
+    "python_files": 103,
+    "directories": 50,
+    "file_types": {
+      ".py": 103,
+      ".md": 20,
+      ".sh": 10,
+      ".yml": 1,
+      "": 2,
+      ".pyc": 20,
+      ".txt": 5,
+      ".csv": 2,
+      ".nd2": 130,
+      ".ipynb": 5
+    }
+  },
+  "modules": [
+    "imageanalysis",
+    "imageanalysis.bin",
+    "imageanalysis.config",
+    "imageanalysis.core",
+    "imageanalysis.core.genotyping",
+    "imageanalysis.core.mapping",
+    "imageanalysis.core.phenotyping",
+    "imageanalysis.core.segmentation",
+    "imageanalysis.core.visualization",
+    "imageanalysis.utils"
+  ],
+  "documentation": [
+    "PACKAGE_STRUCTURE.md",
+    "CLAUDE.md",
+    "refactored_pipeline_structure.md",
+    "Structure.md",
+    "PACKAGE_IMPORT_FIXES.md",
+    "CLEANING_GUIDE.md",
+    "INSTALLATION.md",
+    "original_pipeline_structure.md",
+    "README.md",
+    "function_mapping.md",
+    "AutomatedMapping.md",
+    "Changes.md",
+    "FunctionReference.md",
+    "CHANGELOG.md",
+    "PACKAGE_FIXES.md",
+    "PipelineOrganization.md",
+    "MIGRATION_GUIDE.md"
+  ]
+}

@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import List, Optional
 
-from core.phenotyping.pipeline import StandardPhenotypingPipeline
+from imageanalysis.core.phenotyping.pipeline import StandardPhenotypingPipeline
 
 def parse_args() -> argparse.Namespace:
     """Parse command-line arguments.
@@ -95,27 +95,25 @@ def main() -> None:
         if not getattr(args, key):
             setattr(args, key, value)
             
-    # Create pipeline
-    pipeline = StandardPhenotypingPipeline(
-        input_file=args.input_file,
-        segmentation_dir=args.segmentation_dir,
-        channels=args.channels,
-        metrics=args.metrics,
-        genotyping_dir=args.genotyping_dir,
-        output_dir=args.output_dir,
-        pixel_size=args.pixel_size
-    )
+    # Create config dictionary for pipeline
+    pipeline_config = {
+        'input_file': args.input_file,
+        'segmentation_dir': args.segmentation_dir,
+        'channels': args.channels,
+        'metrics': args.metrics,
+        'genotyping_dir': args.genotyping_dir,
+        'output_dir': args.output_dir,
+        'pixel_size': args.pixel_size,
+        'wells': args.wells
+    }
     
-    # Validate inputs
-    try:
-        pipeline.validate_inputs()
-    except ValueError as e:
-        print(f"Error: {e}", file=sys.stderr)
-        sys.exit(1)
-        
+    # Create pipeline
+    pipeline = StandardPhenotypingPipeline(pipeline_config)
+    
     # Run pipeline
     try:
-        pipeline.run(wells=args.wells)
+        result = pipeline.run()
+        print(f"Phenotyping results: {result}")
     except Exception as e:
         print(f"Error during pipeline execution: {e}", file=sys.stderr)
         sys.exit(1)

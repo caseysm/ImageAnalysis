@@ -8,11 +8,8 @@ import os
 import sys
 from pathlib import Path
 
-# Add parent directory to Python path
-sys.path.append(str(Path(__file__).parent.parent))
-
-from core.mapping.pipeline import MappingPipeline
-from utils.logging import setup_logger
+from ImageAnalysis.core.mapping.pipeline import MappingPipeline
+from ImageAnalysis.utils.logging import setup_logger
 
 def parse_args():
     """Parse command-line arguments."""

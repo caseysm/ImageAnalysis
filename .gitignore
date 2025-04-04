@@ -14,3 +14,21 @@ output/
 
 # DS_Store
 .DS_Store
+
+# Claude
+CLAUDE.md
+
+# pycache
+__pycache__/
+
+# egg info
+*.egg-info/
+
+# venv
+venv/
+
+# results
+results/
+
+# logs
+logs/

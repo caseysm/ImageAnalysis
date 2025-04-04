@@ -6,8 +6,8 @@ from typing import Dict, List, Optional, Union, Any
 import json
 import numpy as np
 
-from ..pipeline import Pipeline
-from ...utils.io import ImageLoader
+from ImageAnalysis.core.pipeline import Pipeline
+from ImageAnalysis.utils.io import ImageLoader
 
 class SegmentationPipeline(Pipeline):
     """Base class for image segmentation pipelines.

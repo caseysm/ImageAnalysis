@@ -7,8 +7,8 @@ import json
 import numpy as np
 import pandas as pd
 
-from ..pipeline import Pipeline
-from ...utils.io import ImageLoader
+from ImageAnalysis.core.pipeline import Pipeline
+from ImageAnalysis.utils.io import ImageLoader
 
 class GenotypingPipeline(Pipeline):
     """Base class for genotyping pipelines.

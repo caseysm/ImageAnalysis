@@ -4,9 +4,9 @@ from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 import pandas as pd
 
-from .base import GenotypingPipeline
-from .peak_calling import PeakCaller
-from .barcode_assignment import BarcodeAssigner
+from ImageAnalysis.core.genotyping.base import GenotypingPipeline
+from ImageAnalysis.core.genotyping.peak_calling import PeakCaller
+from ImageAnalysis.core.genotyping.barcode_assignment import BarcodeAssigner
 
 class StandardGenotypingPipeline(GenotypingPipeline):
     """Standard implementation of the genotyping pipeline."""
