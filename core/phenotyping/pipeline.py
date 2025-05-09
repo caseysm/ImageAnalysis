@@ -7,9 +7,9 @@ from pathlib import Path
 from typing import Dict, List, Optional, Union, Any, Tuple
 from skimage import measure, filters
 
-from .base import PhenotypingPipeline
-from .metrics import calculate_all_metrics
-from ...utils.io import ImageLoader
+from ImageAnalysis.core.phenotyping.base import PhenotypingPipeline
+from ImageAnalysis.core.phenotyping.metrics import calculate_all_metrics
+from ImageAnalysis.utils.io import ImageLoader
 
 class StandardPhenotypingPipeline(PhenotypingPipeline):
     """Standard implementation of phenotype measurement pipeline.

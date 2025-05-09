@@ -17,3 +17,18 @@ output/
 
 # Claude
 CLAUDE.md
+
+# pycache
+**pycache**/
+
+# egg info
+*.egg-info/
+
+# venv
+venv/
+
+# results
+results/
+
+# logs
+logs/

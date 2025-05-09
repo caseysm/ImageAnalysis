@@ -5,10 +5,10 @@ import os
 import numpy as np
 from skimage import filters, morphology, measure
 
-from .base import SegmentationPipeline
-from .cell_segmentation import CellSegmentation
-from ...utils.io import ImageLoader
-from ...config.settings import NUCLEI_DIAMETER_40X, CELL_DIAMETER_40X
+from ImageAnalysis.core.segmentation.base import SegmentationPipeline
+from ImageAnalysis.core.segmentation.cell_segmentation import CellSegmentation
+from ImageAnalysis.utils.io import ImageLoader
+from ImageAnalysis.config.settings import NUCLEI_DIAMETER_40X, CELL_DIAMETER_40X
 
 class Segmentation40XPipeline(SegmentationPipeline):
     """Pipeline for segmenting 40X magnification images."""

@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 from skimage import exposure, transform, draw
 
-from ..pipeline import Pipeline
-from ...utils.io import ImageLoader
+from ImageAnalysis.core.pipeline import Pipeline
+from ImageAnalysis.utils.io import ImageLoader
 
 class AlbumGenerationPipeline(Pipeline):
     """Pipeline for generating cell image albums.
