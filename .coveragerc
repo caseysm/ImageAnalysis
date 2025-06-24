@@ -1,0 +1,43 @@
+[run]
+source = imageanalysis
+omit = 
+    */tests/*
+    */test_*
+    */__init__.py
+    */setup.py
+    */original_pipeline/*
+    */modified_original_pipeline/*
+    */scripts/*
+
+[report]
+precision = 2
+skip_covered = False
+show_missing = True
+exclude_lines =
+    # Standard pragma
+    pragma: no cover
+    
+    # Debug-only code
+    def __repr__
+    if self\.debug
+    
+    # Defensive programming
+    raise AssertionError
+    raise NotImplementedError
+    
+    # Non-runnable code
+    if 0:
+    if __name__ == .__main__.:
+    
+    # Type checking
+    if TYPE_CHECKING:
+    @overload
+    
+    # Abstract methods
+    @abstractmethod
+
+[html]
+directory = htmlcov
+
+[xml]
+output = coverage.xml

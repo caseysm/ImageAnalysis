@@ -38,6 +38,22 @@ setup(
             'create_albums=imageanalysis.bin.create_albums:main',
         ],
     },
+    extras_require={
+        'test': [
+            'pytest>=7.0.0',
+            'pytest-cov>=4.0.0',
+            'pytest-xdist>=3.0.0',
+            'pytest-mock>=3.10.0',
+            'pytest-timeout>=2.1.0',
+            'hypothesis>=6.0.0',
+        ],
+        'dev': [
+            'black>=22.0.0',
+            'flake8>=5.0.0',
+            'mypy>=0.990',
+            'pre-commit>=2.20.0',
+        ],
+    },
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Science/Research",
