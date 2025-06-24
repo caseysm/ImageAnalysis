@@ -32,3 +32,5 @@ results/
 
 # logs
 logs/
+
+**/.claude/settings.local.json

@@ -1,0 +1,5 @@
+,,,rmsd,rmsd,param_error,param_error,time_ms,time_ms,memory_kb,memory_kb,iterations,iterations
+,,,mean,std,mean,std,mean,std,mean,std,mean,std
+optimization,noise_level,num_points,,,,,,,,,,
+L-BFGS-B,2.0,100,2.854340513577148,,0.3808281138189323,,12.393951416015625,,32.0009765625,,13.0,
+LMA,2.0,100,2.854340416216649,,0.38128681404783443,,1.7180442810058594,,39.6259765625,,15.0,

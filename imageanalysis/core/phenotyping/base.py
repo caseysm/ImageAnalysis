@@ -6,8 +6,8 @@ from typing import Dict, List, Optional, Union, Any
 import json
 import numpy as np
 
-from ImageAnalysis.core.pipeline import Pipeline
-from ImageAnalysis.utils.io import ImageLoader
+from imageanalysis.core.pipeline import Pipeline
+from imageanalysis.utils.io import ImageLoader
 
 class PhenotypingPipeline(Pipeline):
     """Base class for phenotyping pipelines.

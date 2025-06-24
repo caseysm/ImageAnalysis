@@ -76,40 +76,41 @@ class Segmentation10XPipeline:
     
     def segment_nuclei(self, nuclear_image, diameter=30):
         """Segment nuclei using cellpose.
-        
+
         Args:
             nuclear_image: 2D numpy array of the nuclear channel
             diameter: Expected nucleus diameter in pixels
-            
+
         Returns:
             2D numpy array with nucleus labels
         """
         self.logger.info("Segmenting nuclei with cellpose")
-        
+
         # Initialize cellpose model
-        model = cellpose_models.Cellpose(gpu=self.use_gpu, model_type='nuclei')
-        
+        # For cellpose 4.x, use CellposeModel instead
+        model = cellpose_models.CellposeModel(gpu=self.use_gpu, model_type='nuclei')
+
         # Run segmentation
-        masks, _, _, _ = model.eval(nuclear_image, diameter=diameter, channels=[[0, 0]])
-        
+        masks, _, _, _ = model.eval(nuclear_image, diameter=diameter, channels=[0, 0])
+
         return masks
     
     def segment_cells(self, cell_image, nuclear_image=None, diameter=60):
         """Segment cells using cellpose.
-        
+
         Args:
             cell_image: 2D numpy array of the cell channel
             nuclear_image: Optional nuclear image to guide segmentation
             diameter: Expected cell diameter in pixels
-            
+
         Returns:
             2D numpy array with cell labels
         """
         self.logger.info("Segmenting cells with cellpose")
-        
+
         # Initialize cellpose model
-        model = cellpose_models.Cellpose(gpu=self.use_gpu, model_type='cyto2')
-        
+        model = cellpose_models.CellposeModel(gpu=self.use_gpu, model_type='cyto2')
+
         # Run segmentation with or without nuclear channel
         if nuclear_image is not None:
             # Prepare 3-channel image with cell and nuclear channels
@@ -117,10 +118,10 @@ class Segmentation10XPipeline:
             seg_data = np.zeros((h, w, 3))
             seg_data[:, :, 0] = cell_image
             seg_data[:, :, 2] = nuclear_image
-            masks, _, _, _ = model.eval(seg_data, diameter=diameter, channels=[[1, 3]])
+            masks, _, _, _ = model.eval(seg_data, diameter=diameter, channels=[1, 3])
         else:
-            masks, _, _, _ = model.eval(cell_image, diameter=diameter, channels=[[0, 0]])
-        
+            masks, _, _, _ = model.eval(cell_image, diameter=diameter, channels=[0, 0])
+
         return masks
     
     def extract_props(self, nuclei_mask, cell_mask):
