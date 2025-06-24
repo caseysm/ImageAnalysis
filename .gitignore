@@ -15,9 +15,6 @@ output/
 # DS_Store
 .DS_Store
 
-# Claude
-CLAUDE.md
-
 # pycache
 **pycache**/
 
@@ -32,5 +29,3 @@ results/
 
 # logs
 logs/
-
-**/.claude/settings.local.json

@@ -1,0 +1,29 @@
+# Include documentation
+include README.md
+include LICENSE
+include CHANGELOG.md
+include INSTALLATION.md
+include CLAUDE.md
+
+# Include package data
+recursive-include imageanalysis *.py
+
+# Include tests
+recursive-include tests *.py
+
+# Include environment files
+include environment.yml
+include environment_mac.yml
+
+# Exclude unnecessary files
+exclude Data
+recursive-exclude Data *
+exclude results
+recursive-exclude results *
+exclude test_benchmark
+recursive-exclude test_benchmark *
+recursive-exclude * *.pyc
+recursive-exclude * __pycache__
+recursive-exclude * .DS_Store
+prune original_pipeline
+prune modified_original_pipeline

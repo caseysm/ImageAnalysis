@@ -9,8 +9,8 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from utils.io import ImageLoader
-from core.segmentation.segmentation_10x import Segmentation10XPipeline
+from imageanalysis.utils.io import ImageLoader
+from imageanalysis.core.segmentation.segmentation_10x import Segmentation10XPipeline
 
 def test_segmentation():
     """Test the 10x segmentation pipeline."""
